@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-IngresoApplication<ingreso>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.alkemy.ingreso.IngresoApplication",
+            "projectName": "ingreso",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
