@@ -21,7 +21,7 @@ import lombok.Setter;
 public class PersonajeEntity {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
     
     private String imagen;

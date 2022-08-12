@@ -1,10 +1,10 @@
 
-// GENERO Controller
+// PERSONAJE Controller
 
 package com.alkemy.ingreso.controller;
 
-import com.alkemy.ingreso.dto.GeneroDTO;
-import com.alkemy.ingreso.service.GeneroService;
+import com.alkemy.ingreso.dto.PersonajeDTO;
+import com.alkemy.ingreso.service.PersonajeService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,23 +17,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("generos")
+@RequestMapping("personajes")
 @CrossOrigin(origins="*")
-public class GeneroController {
+public class PersonajeController {
     
     @Autowired
-    private GeneroService generoService;
+    private PersonajeService personajeService;
     
     @GetMapping
-    public ResponseEntity<List<GeneroDTO>> getAll(){
-        List<GeneroDTO> generos = generoService.getAllGeneros();
-        return ResponseEntity.ok().body(generos);
+    public ResponseEntity<List<PersonajeDTO>> getAll(){
+        List<PersonajeDTO> personajes = personajeService.getAllPersonajes();
+        return ResponseEntity.ok().body(personajes);
     }
     
     @PostMapping
-    public ResponseEntity<GeneroDTO> save(@RequestBody GeneroDTO genero){
-        GeneroDTO generoGuardado = generoService.save(genero);
-        return ResponseEntity.status(HttpStatus.CREATED).body(generoGuardado);
+    public ResponseEntity<PersonajeDTO> save(@RequestBody PersonajeDTO personaje){
+        PersonajeDTO peliculaGuardada = personajeService.save(personaje);
+        return ResponseEntity.status(HttpStatus.CREATED).body(peliculaGuardada);
     }
    
 }

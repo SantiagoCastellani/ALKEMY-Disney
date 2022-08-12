@@ -23,7 +23,7 @@ import lombok.Setter;
 public class GeneroEntity {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;    
     
     private String nombre;

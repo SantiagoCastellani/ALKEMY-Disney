@@ -28,7 +28,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class PeliculaEntity {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
     
     private String imagen;
